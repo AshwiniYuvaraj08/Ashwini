@@ -1,1 +1,190 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    float selvi=127.2f;
+		System.out.print(selvi);
+		System.out.println();
+	    System.out.printf("%.2f",selvi);
+	
+	}
+}
+OUTPUT:
+120.2
+120.20
+#########################################
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    String name;
+		Scanner kbd=new Scanner(System.in);
+		name=kbd.nextLine();
+		System.out.println(name);
+	    
+	System.out.println(name.charAt(2));
+	}
+}
 
+OUTPUT:
+ASHWINI
+H
+#########################################
+public class Main{
+public static void main(String[] args) 
+{
+ System.out.println("Let's learn 'JAVA' together with Selvi");
+}
+}
+OUTPUT:
+let's learn 'JAVA' together with Selvi
+#######################################
+public class Main{
+public static void main(String[] args) 
+{
+ System.out.println("If you want to shine like a \"Sun\",first burn like a \"Sun\".");
+}
+}
+OUTPUT:
+If you want to shine like a "sun",first burn like a "sun". 
+######################################
+public class Main{
+public static void main(String[] args) {
+    int num1=20;
+    int num2=10;
+    System.out.println(num1+" "+num2);
+}
+}
+OUTPUT:
+20 10
+######################################
+import java.util.*;
+public class Main{
+public static void main(String[] args) {
+    Scanner sc= new Scanner(System.in);
+    char character= sc.next().charAt(0);
+    System.out.println(character);
+}
+}
+OUTPUT:
+ASHWINI
+A
+#####################################
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int firstNumber = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
+        System.out.printf("%05d \n %5d", firstNumber, secondNumber);
+    }
+}
+OUTPUT:
+FIRST NUMBER:5643
+SECOND NUMBER:28
+        05643
+           28
+#######################################
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        char character= sc.next().charAt(0);
+        int ASCIIvalue= character;
+        System.out.println(character+":"+ASCIIvalue);
+}
+}
+OUTPUT:
+ASHWINI
+A=65
+#######################################
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int Ascii= sc.nextInt();
+           char character= (char)Ascii; 
+           System.out.println(Ascii+":"+character);
+}
+}
+OUTPUT:
+78
+78:N
+#########################################
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        float inputValue = scanner.nextFloat();
+        System.out.printf("%20.4f\n", inputValue);
+    }
+}
+OUTPUT:
+45.435791
+     45.4357
+########################################
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        float floatValue = scanner.nextFloat();
+        int precision = scanner.nextInt();
+                 System.out.printf("%." + precision + "f", floatValue);
+    }
+}
+OUTPUT:
+3.26789
+3
+3.267
+###########################################
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        float inputValue = scanner.nextFloat();
+                System.out.println(Math.round(inputValue));
+    }
+}
+OUTPUT:
+4.56772
+4
+########################################
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+         String input = scanner.next();
+        
+           
+                System.out.println(Integer.decode(input));
+    }
+}
+output:
+123
+123
+##############################################
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+        
+        System.out.println(Integer.toHexString(input));
+    }
+}
+OUTPUT:
+192
+cO
+################################################
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.next();
+        System.out.println(input.replaceAll("0*$", "").replaceAll("\\.$", ""));
+    }
+}
+OUTPUT:
+12.4658
+12.4658
+##############################################
