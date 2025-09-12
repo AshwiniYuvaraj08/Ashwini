@@ -269,3 +269,240 @@ Yes. You are eligible for SBI credit cards
 17
 400000
 No. You are not eligible for SBI credit cards
+###############################################
+Q11. Triangle Shape
+import java.util.Scanner;
+
+public class triangle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int a=kbd.nextInt();
+		 int b=kbd.nextInt();
+		 int c=kbd.nextInt();
+		 
+		 if (a==b){
+			 
+			 System.out.println("Equilateral Triangle");
+			 
+		 }
+		 
+		 else if (a==b && b==c && a==c){
+			 
+			 System.out.println("Isosceles Triangle"); 
+			 
+		 }
+		 
+		 else {
+			 
+			 System.out.print("Scalene Triangle");
+		 }
+    }
+
+}
+#####################################
+Q12.Descending order 
+import java.util.Scanner;
+
+public class descending {
+	
+	public static void main (String[] args) {
+		
+		Scanner kbd = new Scanner(System.in);
+		
+		int[] numbers = new int[4];
+		
+		 
+		for(int i=0; i<4; i++) {
+			
+			numbers[i] = kbd.nextInt();
+			
+	}
+		 
+		for(int i=3; i>=0; i--) {
+			
+			System.out.print(numbers[i] +"  "); 
+		}
+		
+	}
+}
+OUTPUT:
+20 25 36 40 
+40  36  25  20  
+##############################################
+Q13.Character Type
+import java.util.Scanner;
+
+public class character {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		  
+		 char ch = kbd.next().charAt(0);
+		 
+		 if((ch>= 'a' && ch<= 'z')|| ch >= 'A' && ch <= 'Z') {
+			 
+			 System.out.print("Alphabet");
+			 
+		 }
+		 else if ( ch >= '0' && ch <= '9') {
+			 
+			 System.out.print("digit");
+	
+		 }
+		 else {
+			 System.out.print("Special");
+		 }
+		
+		}
+
+}
+OUTPUT:
+H
+Alphabet
+6
+Digit
+@
+Special
+########################################
+Q14. Even Numbers in Range 
+import java.util.Scanner;
+
+public class rangeeven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int i=kbd.nextInt();
+		 
+		 for(i=1;i<=10;i++)
+			 if(i%2==0) {
+				 System.out.print(i + " ");
+			 }
+	}
+
+}
+OUTPUT:
+1 10
+2 4 6 8 10
+##################################################3
+Q15. Sum of even number
+
+import java.util.Scanner;
+
+public class sumofeven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int n=kbd.nextInt();
+		
+	        int k = n / 2;  
+	        int sum = k * (k + 1);
+	        System.out.println(sum);
+
+	}
+
+}
+OUTPUT:
+10
+30
+######################################
+Q16.Sum of Odd and Even Numbers
+import java.util.Scanner;
+
+public class Sumofoddeven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int n=kbd.nextInt();
+		 int k = n / 2;  
+	        int sumeven = k * (k + 1);
+	     int a = (n+1) / 2;
+	        int sumodd = a * a;
+	        
+	        System.out.println(sumodd +" "+sumeven);
+	}      
+	
+}
+OUTPUT:
+18
+81 90
+#######################################################
+Q17. Factorial
+import java.util.Scanner;
+
+public class factorial {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int n = kbd.nextInt();
+		 
+		 if(n < 0) {
+			  
+			 System.out.print("Error! Factorial of a negative number doesn't exist");
+			 
+		 }
+		
+		 else {
+			 long fact=1;
+			 for (int i = 1; i <= n; i++) {
+	             fact *= i;
+			 
+		 }
+			 System.out.println(fact);
+         
+		 }
+	}
+
+}
+OUTPUT:
+8
+40320
+-5
+Error! Factorial of a negative number doesn't exist
+############################################3
+Q18. Print Digits Right to Left
+import java.util.Scanner;
+
+public class digitrighttoleft {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int n=kbd.nextInt();
+		 
+		 while(n>0)
+			 
+		 {
+			 int digit n % = 10;
+			 System.out.print("digit");
+			 n=n/10;
+			 
+		}	 
+
+	}
+
+}
+OUTPUT:
+
+
+
+
+
+
+
+
+
+
+
