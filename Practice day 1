@@ -495,7 +495,283 @@ public class digitrighttoleft {
 
 }
 OUTPUT:
+12345
+5 4 3 2 1 
+###########################################
+Q19. Sum of Numbers Divisible by 3 or 5
+import java.util.Scanner;
 
+public class sumdivisibleby3n5 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		
+		 int start = kbd.nextInt();
+	        int end = kbd.nextInt();
+	        int sum = 0;
+
+	        for (int i = start; i <= end; i++) {
+	            if (i % 3 == 0 || i % 5 == 0) {
+	                sum += i;
+	            }
+	        }
+
+	        System.out.println(sum);
+	    }
+	}
+Output:
+5 26
+165
+######################################################
+Q20. Count Digits
+import java.util.Scanner;
+
+public class countdigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int num=kbd.nextInt();
+		 int count = String.valueOf(Math.abs(num)).length();
+	        
+	        // Output
+	        System.out.println(count);
+	}
+
+}
+OUTPUT:
+153246
+6
+#####################################################
+Q21. Sum of Digits
+import java.util.Scanner;
+
+public class sumofdigit{
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+
+        int n = kbd.nextInt();
+        int sum = 0;
+        while(n>0)
+        {
+        	int digit = n%10;
+        	sum += digit;
+        	n=n/10;
+        	
+        }
+        
+        System.out.print(sum);
+	}
+}
+OUTPUT:
+14563
+19
+######################################################33
+Q22. Harshad Number
+import java.util.Scanner;
+
+public class harshadnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+        
+		int num= sc.nextInt();
+		int temp = num;
+        int sum = 0;
+        
+        // Calculate sum of digits
+        while (temp > 0) {
+            sum += temp % 10;
+            temp /= 10;
+        }
+        
+        // Check Harshad condition
+        if (num % sum == 0) {
+            System.out.println("Harshad Number");
+        } else {
+            System.out.println("Not Harshad Number");
+	}
+}
+}
+OUTPUT:
+18
+Harshad Number
+28
+ NO Harshad Number
+###################################################
+Q23. Perfect Number
+import java.util.Scanner;
+public class Perfectnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+	
+	 
+		 int num =kbd.nextInt();
+	        int sum = 0;
+	       
+	        for (int i = 1; i <= num / 2; i++) {
+	            if (num % i == 0) {
+	                sum += i;
+	            }
+	        }
+	        if (sum == num) {
+	            System.out.println("Perfect Number");
+	        } else {
+	            System.out.println("Not Perfect Number");
+	        }
+	    }
+}
+Output:
+6
+Perfect Number
+24
+Not perfect number
+#####################################################
+Q24. Prime Number 
+import java.util.Scanner;
+
+public class Primenum {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner kbd = new Scanner(System.in);
+	 
+	 
+	 int num = kbd.nextInt();
+     boolean isPrime = true;
+
+     if (num <= 1) {
+         isPrime = false;   
+     } else {
+        
+         for (int i = 2; i * i <= num; i++) {
+             if (num % i == 0) {
+                 isPrime = false;
+                 break;
+             }
+         }
+     }
+
+ 
+     if (isPrime) {
+         System.out.println("Prime");
+     } else {
+         System.out.println("Not Prime");
+     }
+
+}
+}
+Output:
+3
+Prime
+24
+Not prime
+#########################################
+Q25. Perfect Square
+import java.util.Scanner;
+public class perfectsquare {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+
+        // Input
+        int num = sc.nextInt();
+
+		
+		
+		int root = (int) Math.sqrt(num);
+
+        // Check if square of root equals number
+        if (root * root == num) {
+            System.out.println("Perfect Square");
+        } else {
+            System.out.println("Not Perfect Square");
+        }
+    }
+}
+Output:
+16
+Perfect Square
+8
+Not Perfect Square
+#####################################################
+Q26. Fibonacci Series
+import java.util.Scanner;
+
+public class fib {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int N=kbd.nextInt();
+		 int a = 0, b = 1;
+
+	        
+	        for (int i = 1; i <= N; i++) {
+	            System.out.print(a + " ");
+	            int next = a + b;
+	            a = b;
+	            b = next;	 
+	}
+
+}
+}
+Output:
+6
+0 1 1 2 3 5 
+########################################
+Q 27 get set of age in array input and Count as following
+import java.util.Scanner;
+
+public class age {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		 
+		int n = sc.nextInt();
+        int[] ages = new int[n];
+
+        // Input array elements
+        for (int i = 0; i < n; i++) {
+            ages[i] = sc.nextInt();
+        }
+
+        int baby = 0, school = 0, adult = 0;
+
+        // Count categories
+        for (int age : ages) {
+            if (age <= 5) {
+                baby++;
+            } else if (age <= 20) {
+                school++;
+            } else {
+                adult++;
+            }
+        }
+
+        // Output
+        System.out.println("Baby: " + baby);
+        System.out.println("Attending school: " + school);
+        System.out.println("Adult: " + adult);
+    }
+}
+Output:
+5
+5 6 9 2 7
+Baby: 2
+Attending school: 3
+Adult: 0
+
+
+########################################################################
 
 
 
