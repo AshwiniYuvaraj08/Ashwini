@@ -1,0 +1,280 @@
+
+----------------------------------Q1: Print Digits (Right to Left)------------------------------------
+import java.util.Scanner;
+
+   public class digitrighttoleft {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner kbd = new Scanner(System.in);
+		 
+	int n = kbd.nextInt();
+
+    while (n > 0) {
+        int digit = n % 10;     
+        System.out.print(digit + " "); 
+        n = n / 10;    
+	}	 
+
+	}
+
+   }
+Output:
+4562
+2 6 5 4
+
+-------------------------------------Q2: Print Digits (Left to Right)-----------------------------------------
+import java.util.Scanner;
+
+public class diglefttorig {
+public static void main(String[] args) {
+		
+		Scanner kbd=new Scanner(System.in);
+		  
+	        String n = sc.next();
+
+	        for (int i = 0; i < n.length(); i++) {
+	            System.out.print(n.charAt(i) + " ");
+	        }
+		}
+}
+Output:
+123
+1 2 3
+
+-----------------------------------------Q3: Count Digits ---------------------------------------------------
+import java.util.Scanner;
+
+public class countdigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int num=kbd.nextInt();
+		 int count = String.valueOf(Math.abs(num)).length();
+	        System.out.println(count);
+	}
+
+}
+Output:
+1234567
+7
+
+-----------------------------------------Q4: Sum of Digits---------------------------------------------------
+import java.util.Scanner;
+
+public class sumofdigit{
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+
+        int n = kbd.nextInt();
+        int sum = 0;
+        while(n>0)
+        {
+        	int digit = n%10;
+        	sum += digit;
+        	n=n/10;
+        	
+        }
+        
+        System.out.print(sum);
+	}
+}
+ Output:
+258
+15
+
+----------------------------------------Q5: Armstrong Number---------------------------------------
+import java.util.Scanner;
+
+public class armstrong {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+
+        int n = kbd.nextInt();
+
+        int numDigits = String.valueOf(n).length();
+        int sum = 0, temp = n;
+
+        while (temp > 0) {
+            int d = temp % 10;
+            sum += Math.pow(d, numDigits);
+            temp /= 10;
+        }
+
+        if (sum == n)
+            System.out.println("Armstrong Number");
+        else
+            System.out.println("Not Armstrong Number");
+   
+	}
+
+}
+Output:
+371
+Armstrong Number
+254
+Not Armstrong Number
+
+---------------------------------------Q6: Collatz Sequence---------------------------------------
+import java.util.Scanner;
+public class collatzsquare {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        while (n != 1) {
+            System.out.print(n + ", ");
+            if (n % 2 == 0)
+                n = n / 2;
+            else
+                n = 3 * n + 1;
+        }
+        System.out.print("1");
+    }
+}
+
+Output:
+52
+52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1
+
+----------------------------------------Q7: Harshad / Niven Number---------------------------------------
+import java.util.Scanner;
+
+public class harshadnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int num=kbd.nextInt();
+		 int temp = num;
+	        int sum = 0;
+	        
+	        // Calculate sum of digits
+	        while (temp > 0) {
+	            sum += temp % 10;
+	            temp /= 10;
+	        }
+	        
+	        // Check Harshad condition
+	        if (num % sum == 0) {
+	            System.out.println("Harshad Number");
+	        } else {
+	            System.out.println("Not Harshad Number");
+		}
+
+
+	}
+
+}
+Output:
+25
+Not Harshad Number
+18
+Harshad Number
+
+-------------------------------------------Q8: Spy Number------------------------------------------
+import java.util.Scanner;
+
+public class spynum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int i=kbd.nextInt();
+		 
+		 int sum = 0, product = 1, temp = i;
+	        while (temp > 0) {
+	            int d = temp % 10;
+	            sum += d;
+	            product *= d;
+	            temp /= 10;
+	        }
+
+	        if (sum == product)
+	            System.out.println("Spy Number");
+	        else
+	            System.out.println("Not Spy Number");
+
+	}
+
+}
+Output:
+1124
+Spy Number
+2365
+Not Spy Number
+
+------------------------------------------------Q9: Neon Number --------------------------------------------------
+import java.util.Scanner;
+
+public class neonnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int n=kbd.nextInt();
+		 int square = n * n;
+	        int sum = 0;
+
+	        while (square > 0) {
+	            sum += square % 10;
+	            square /= 10;
+	        }
+
+	        if (sum == n)
+	            System.out.println("Neon Number");
+	        else
+	            System.out.println("Not Neon Number");
+
+
+	}
+
+}
+Output:
+6
+Not Neon Number
+9
+Neon Number
+
+---------------------------------------Q10: Reverse a Number---------------------------------------
+import java.util.Scanner;
+
+public class reversenum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner kbd = new Scanner(System.in);
+		 
+		 int n=kbd.nextInt();
+		 int rev = 0;
+	        while (n > 0) {
+	            rev = rev * 10 + (n % 10);
+	            n /= 10;
+	        }
+
+	        System.out.println(rev);
+	}
+
+}
+Output:
+321 
+123
+
+------------------------------------------
+
+
+
+
+
+
+
