@@ -270,7 +270,319 @@ Output:
 321 
 123
 
-------------------------------------------
+------------------------------------------Q11: Palindrome Number-------------------------------------------
+import java.util.Scanner;
+
+public class Palindromenum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner kbd=new Scanner(System.in);
+		
+		int n=kbd.nextInt();
+		int rev=0;
+		int temp=n;
+		while(n>0)
+		{
+			int digit =n%10;
+			rev=rev*10+digit;
+			n=n/10;
+		}
+		
+		System.out.print(rev);
+		
+		if(temp==rev) {
+			System.out.print("Palindrome");
+		}
+		else {
+			System.out.print("Not a Palindrome");
+			}
+	}
+
+}
+Output:
+121
+Palindrome
+245
+Not a Palindrome
+
+--------------------------------------Q12: Strong Number-----------------------------------
+import java.util.*;
+public class Strongestnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		 int n = sc.nextInt();
+		int temp = n, sum = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            sum += factorial(digit);
+            n = n / 10;
+        }
+
+        if (sum == temp) {
+            System.out.println("Strong Number");
+        } else {
+            System.out.println("Not Strong Number");
+        }
+        sc.close();
+    }
+
+    static int factorial(int num) {
+        int fact = 1;
+        for (int i = 1; i <= num; i++) {
+            fact *= i;
+        }
+        return fact;
+    }
+}
+Output:
+145
+Strong Number
+253
+Not Strong Number
+
+---------------------------------Q13: Magic Number----------------------------------
+import java.util.Scanner;
+
+public class magicwords {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner kbd=new Scanner(System.in);
+		
+        int n = kbd.nextInt();
+        if (isMagic(n)) {
+            System.out.println("Magic Number");
+        } else {
+            System.out.println("Not Magic Number");
+        }
+       
+    }
+
+    static boolean isMagic(int n) {
+        while (n >= 10) {
+            n = digitSum(n);
+        }
+        return n == 1;
+    }
+
+    static int digitSum(int n) {
+        int sum = 0;
+        while (n > 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+        return sum;
+    }
+}
+Output:
+19
+Magic Number
+15
+Not a magic number
+---------------------------Q14: Center Digit of a Number ---------------------
+import java.util.Scanner;
+
+public class Centerdigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+          Scanner kbd=new Scanner(System.in);
+          String s = kbd.next();
+          int len = s.length();
+
+          if (len % 2 == 0) {
+              System.out.println("-1");
+          } else {
+              System.out.println(s.charAt(len / 2));
+          }
+         
+	}
+	
+  }
+Output:
+1258963
+8
+2365
+-1
+-------------------------------------Q15: Frequency of Digits------------------------------
+
+
+import java.util.Scanner;
+
+public class frequencyofdigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		 int n = sc.nextInt();
+		 
+	        String s = sc.next();
+	        int[] count = new int[10];
+
+	        for (char c : s.toCharArray()) {
+	            count[c - '0']++;
+	        }
+
+	        boolean first = true;
+	        for (int d = 0; d <= 9; d++) {
+	            if (count[d] > 0) {
+	                if (!first) System.out.print(", ");
+	                System.out.print(d + "→" + count[d]);
+	                first = false;
+	            }
+	        }
+Output:
+1122334455
+5
+5→1
+
+-----------------------------Q16: GCD (Euclidean Algorithm)-----------------------------
+import java.util.Scanner;
+
+public class gcd {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner sc=new Scanner(System.in);
+		
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+
+        System.out.println(a);
+       }
+}
+Output:
+15 36
+3
+
+----------------------------Q17: Swap First and Last Digit------------------------------
+import java.util.Scanner;
+
+public class swapofdigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub\
+		Scanner sc= new Scanner(System.in);
+		
+		 String s = sc.next();
+
+	        if (s.length() == 1) {
+	            System.out.println(s); // single-digit number stays same
+	        } else {
+	            char first = s.charAt(0);
+	            char last = s.charAt(s.length() - 1);
+	            String result = last + s.substring(1, s.length() - 1) + first;
+	            System.out.println(result);
+	        }
+	       
+	    }
+	}
+Output:
+123456789
+923456781
+
+--------------------------Q18: First / Last Occurrence of a Digit---------------------------
+import java.util.*;
+public class firstoccuranceofdigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Scanner sc = new Scanner(System.in);
+	        String num = sc.next();
+	        char target = sc.next().charAt(0);
+
+	        int first = -1, last = -1;
+	        for (int i = 0; i < num.length(); i++) {
+	            if (num.charAt(i) == target) {
+	                if (first == -1) first = i + 1; // 1-based index
+	                last = i + 1;
+	            }
+	        }
+
+	        if (first == -1) {
+	            System.out.println("Digit not found");
+	        } else {
+	            System.out.println("First=" + first + ", Last=" + last);
+	        }
+	        sc.close();
+	    
+
+	}
+
+}
+Output:
+153553 5
+First=2, Last=5
+
+------------------------------------Q19: Product of Digits ----------------------------
+import java.util.Scanner;
+public class productofdigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int product = 1;
+        if (n == 0) product = 0; // special case for 0
+
+        while (n > 0) {
+            int digit = n % 10;
+            product *= digit;
+            n /= 10;
+        }
+
+        System.out.println(product);
+      }  
+	}
+Output:
+456
+120
+
+---------------------------Q20: Sum of Even Digits-----------------------------
+import java.util.*;
+
+public class sumofdigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int sum = 0;
+        while (n > 0) {
+            int digit = n % 10;
+            if (digit % 2 == 0) {
+                sum += digit;
+            }
+            n /= 10;
+        }
+
+        System.out.println(sum);
+        
+
+	}
+
+}
+Output:
+258
+10
+
+
+###################################################################################################################
+
+
 
 
 
